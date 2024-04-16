@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Home Page</title>
+  <link rel="stylesheet" href="studentHomePage.css">
+</head>
+
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+  <div class="container">
+    <div class="profile">
+      <h2>Student Profile</h2>
+      <div id="profile-photo">
+        <!-- Student photo will be displayed here -->
+      </div>
+
+      <div id="profile-details">
+        <!-- Student details will be displayed here -->
+      </div>
+    </div>
+    <div class="actions">
+      <h2>Actions</h2>
+      <button onclick="viewProfile()">View Profile</button>
+      <button onclick="applyForCertificate('Bonafied Certificate')">Apply for Bonafied Certificate</button>
+      <button onclick="applyForCertificate('Character Certificate')">Apply for Character Certificate</button>
+      <button onclick="applyForNameCorrection()">Apply for Name Correction</button>
+      <button onclick="applyForStudentTransfer()">Apply for Student Transfer</button>
+    </div>
+  </div>
+
+  <script src="studentHomePage.js"></script>
+</body>
+</html>
