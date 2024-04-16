@@ -10,8 +10,8 @@
     <div class="container">
         <h2>Name Correction</h2>
         <form action="#">
-          <input type="text" id="enno" name="enno" placeholder="Enter Enrollment Number" oninvalid="setCustomValidity('Only digits are allowed')" pattern="^[0-9]*$" required>
-          <input type="text" id="name" name="name" placeholder="Enter Corrected Name" oninvalid="setCustomValidity('Fill out this field')" required>
+          <input type="text" id="enno" name="enno" pattern="[0-9]+" setCustomValidity="Enter numbers only" placeholder="Enter Enrollment Number" required>
+          <input type="text" id="name" name="name" placeholder="Enter Corrected Name" setCustomValidity="Fill out this field" required>
           <br>
           <button type="submit">Submit</button>
         </form>
