@@ -23,7 +23,7 @@
     if ($result->num_rows > 0) {
         // Username and password are correct, login successful
         // Redirect to some.php page
-        header("Location: /WP_Project/Student HomePage/studentHomePage.html");
+        header("Location: /WP_Project/Student_HomePage/studentHomePage.html");
     } else {
         // Username or password is incorrect
         echo "Invalid username or password!";
