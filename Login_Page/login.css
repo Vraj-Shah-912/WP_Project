@@ -8,21 +8,21 @@ body {
     align-items: center;
     background-color: #f4f4f4;
   }
-  
+
   .login-container {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
-  h2 {
+  /* h2 {
     margin-bottom: 20px;
-  }
+  } */
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   label {
@@ -32,20 +32,26 @@ body {
   }
   
   input[type="email"],
-  input[type="password"] {
-    width: 100%;
+  input[type="password"],
+  input[type="text"]
+ {
+    width: 350px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    align-items: center;
   }
   
   button {
-    padding: 10px 20px;
+    padding: 11px 23px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 120px;
+    font-size: 15px;
+    margin: 10px
   }
   
   button:hover {
@@ -56,15 +62,15 @@ body {
     position: relative;
   }
 
-  .eye-icon{
+  /* .eye-hide-icon{
     position: absolute;
-    top: 6%;
-    right: -7%;
-    width: 18%;
+    top: 11%;
+    right: 3%;
+    width: 8%;
     cursor: pointer;
-  }
+  } */
   
-  #toggle-password {
+  /* #toggle-password {
     position: absolute;
     top: 50%;
     right: 5px;
@@ -72,5 +78,25 @@ body {
     background-color: transparent;
     border: none;
     cursor: pointer;
+  } */
+  
+
+  .password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
   }
   
+  .password-toggle-icon i {
+    font-size: 18px;
+    line-height: 1;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin-bottom: 5px;
+  }
+  
+  .password-toggle-icon i:hover {
+    color: #000;
+  }

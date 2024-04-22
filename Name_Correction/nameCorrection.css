@@ -6,9 +6,9 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f4f4f4;
-  }
+}
 
-  .container {
+.container {
     border: 2px solid black;
     width: 400px;
     height: 250px;
@@ -17,25 +17,25 @@ body {
     position: absolute;
     top: 30%;
     left: 39%;
-  }
+}
 
-  input[type="text"] {
+input[type="text"] {
     padding: 10px;
     margin-bottom: 10px;
     width: 300px;
     border-radius: 5px;
     border: 1px solid #ccc;
-  }
+}
 
-  button {
+button {
     padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  button:hover {
+button:hover {
     background-color: #0056b3;
-  }
+}

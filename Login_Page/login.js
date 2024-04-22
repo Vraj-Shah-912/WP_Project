@@ -13,15 +13,31 @@
 //     });
 //   });
 
-var a;
-function pass() {
-  if (a == 1) {
-    document.getElementById('password').type = 'password';
-    document.getElementById('pass-icon').src = 'eye-hide.png';
-    a = 0;
+// var a;
+// function pass() {
+//   if (a == 1) {
+//     document.getElementById('password').type = 'password';
+//     document.getElementById('eye-icon').src = 'eye-hide.png';
+//     a = 0;
+//   }
+//   else {
+//     document.getElementById('password').type = 'text';
+//     document.getElementById('eye-icon').src = 'eye.png';
+//   }
+// }
+
+
+const passwordField = document.getElementById("password");
+const togglePassword = document.querySelector(".password-toggle-icon i");
+
+togglePassword.addEventListener("click", function () {
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    togglePassword.classList.remove("fa-eye");
+    togglePassword.classList.add("fa-eye-slash");
+  } else {
+    passwordField.type = "password";
+    togglePassword.classList.remove("fa-eye-slash");
+    togglePassword.classList.add("fa-eye");
   }
-  else {
-    document.getElementById('password').type = 'text';
-    document.getElementById('pass-icon').src = 'eye.png';
-  }
-}
+});
