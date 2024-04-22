@@ -25,7 +25,7 @@ function viewProfile() {
   
   function applyForNameCorrection() {
     // Logic for applying for name correction
-    alert("Applying for Name Correction");
+    window.location.href = "http://localhost/WP_Project/Name_Correction/nameCorrection.html";;
   }
   
   function applyForStudentTransfer() {
