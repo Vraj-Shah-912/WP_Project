@@ -55,6 +55,14 @@ body {
   .password-input {
     position: relative;
   }
+
+  .eye-icon{
+    position: absolute;
+    top: 6%;
+    right: -7%;
+    width: 18%;
+    cursor: pointer;
+  }
   
   #toggle-password {
     position: absolute;
