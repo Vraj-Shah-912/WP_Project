@@ -1,36 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-</head>
-
-<body>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form id="login-form" action="/Student HomePage/studentHomePage.html">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <div class="password-input" name="password">
-          <input type="password" id="password" name="password" required>
-          <img src="eye-hide.png" onclick="pass()" class="eye-icon" id="eye-icon">
-          <!-- <i class="fa-solid fa-eye" id="eye"></i> -->
-          <!-- <button type="button" id="toggle-password">👁️</button> -->
-        </div>
-      </div>
-      <button type="submit">Login</button>
-    </form>
-  </div>
-
-  <?php
+<?php
     // Establish a database connection
     $servername = "localhost";
     $username = "root";
@@ -55,9 +23,7 @@
     if ($result->num_rows > 0) {
         // Username and password are correct, login successful
         // Redirect to some.php page
-        // header("Location: some.php");
-        // exit(); // Make sure to exit after redirection to prevent further execution
-        echo "Login successful!";
+        header("Location: /WP_Project/Student HomePage/studentHomePage.html");
     } else {
         // Username or password is incorrect
         echo "Invalid username or password!";
@@ -65,8 +31,3 @@
 
     $conn->close();
   ?>
-
-  <script src="login.js"></script>
-</body>
-
-</html>
