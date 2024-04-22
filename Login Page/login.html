@@ -49,7 +49,7 @@
     $pass = $_POST['password'];
 
     // Query to check if the username and password exist in the database
-    $sql = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
+    $sql = "SELECT * FROM student WHERE email = '$user' AND pass = '$pass'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
