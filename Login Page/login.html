@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
   <div class="login-container">
     <h2>Login</h2>
@@ -16,7 +18,7 @@
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <div class="password-input">
+        <div class="password-input" name="password">
           <input type="password" id="password" name="password" required>
           <button type="button" id="toggle-password">👁️</button>
         </div>
@@ -24,7 +26,44 @@
       <button type="submit">Login</button>
     </form>
   </div>
-  
+
+  <?php
+    // Establish a database connection
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "wp";
+
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Get username and password from the login form
+    $user = $_POST['email'];
+    $pass = $_POST['password'];
+
+    // Query to check if the username and password exist in the database
+    $sql = "SELECT * FROM users WHERE username = '$user' AND password = '$pass'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Username and password are correct, login successful
+        // Redirect to some.php page
+        // header("Location: some.php");
+        // exit(); // Make sure to exit after redirection to prevent further execution
+        echo "Login successful!";
+    } else {
+        // Username or password is incorrect
+        echo "Invalid username or password!";
+    }
+
+    $conn->close();
+  ?>
+
   <script src="login.js"></script>
 </body>
+
 </html>
