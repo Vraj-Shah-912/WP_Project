@@ -18,14 +18,17 @@
 
     // Query to check if the username and password exist in the database
     $sql = "SELECT * FROM student WHERE email = '$user' AND pass = '$pass'";
+    $sql2 = "SELECT * FROM faculty WHERE email = '$user' AND pass = '$pass'";
     $result = $conn->query($sql);
+    $result2 = $conn->query($sql2);
 
     if ($result->num_rows > 0) {
-        // Username and password are correct, login successful
-        // Redirect to some.php page
         header("Location: /WP_Project/Student_HomePage/studentHomePage.html");
-    } else {
-        // Username or password is incorrect
+    }
+    elseif ($result2->num_rows > 0){
+        header("Location: /WP_Project/Faculty_HomePage/facultyHomePage.php");
+    }
+    else {
         echo "Invalid username or password!";
     }
 
