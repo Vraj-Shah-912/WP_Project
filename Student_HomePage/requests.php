@@ -15,7 +15,6 @@
         <a href="#studentTransfer" onclick="applyForStudentTransfer()">Student Transfer</a>
       </div>
 <table id="stuTable">
-        <caption style="caption-side:bottom;">Requests</caption>
         <thead>
             <tr>
                 <th>Date</th>
