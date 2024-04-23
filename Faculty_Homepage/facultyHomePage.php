@@ -16,9 +16,83 @@ if(!isset($_SESSION['fac_email'])) {
     <title>Faculty Homepage</title>
 </head>
 
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #007bff; /* Header background color */
+  color: #fff; /* Header text color */
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd; /* Border between rows */
+}
+
+th:first-child, td:first-child {
+  border-left: 1px solid #ddd; /* Border on the left side */
+}
+
+th:last-child, td:last-child {
+  border-right: 1px solid #ddd; /* Border on the right side */
+}
+
+.approve{
+    /* display: block;
+    width: 5%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 7.1%;
+    left: 81%;
+    font-size: 15px; */
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #fff;
+    background-color: #007bff;    
+
+}
+
+.disapprove{
+    /* display: block;
+    width: 6%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: 7.1%;
+    left: 87%;
+    font-size: 15px; */
+    border-radius: 5px;
+    color: #fff;
+    background-color: #003d7d;
+}
+
+button:hover {
+  background-color: #1a80ee;
+}
+
+/* tr:hover { */
+  /* background-color: #f5f5f5; Hover color for rows */
+/* } */
+
+</style>
 <body>
     <table id="stuTable">
-        <caption style="caption-side:bottom;">Requests from students about name changing</caption>
+        <caption style="caption-side:bottom;" font-type="Sa">Requests from students about name changing</caption>
         <thead>
             <tr>
                 <th>ID</th>
@@ -63,7 +137,7 @@ if(!isset($_SESSION['fac_email'])) {
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["enrollment"] . "</td><td>" . $row["date"] . "</td><td>" . $row["name"] . "</td><td>" . $row["status"] . "</td><td><form method='POST'><button name='approve' value='" . $row["enrollment"] . "'>Approve</button><button name='disapprove' value='" . $row["enrollment"] . "'>Disapprove</button></form></td></tr>";
+                    echo "<tr><td>" . $row["enrollment"] . "</td><td>" . $row["date"] . "</td><td>" . $row["name"] . "</td><td>" . $row["status"] . "</td><td><form method='POST'><button name='approve' class='approve' value='" . $row["enrollment"] . "'>Approve</button><button name='disapprove' class='disapprove' value='" . $row["enrollment"] . "'>Disapprove</button></form></td></tr>";
                 }
             } else {
                 echo "<tr><td colspan='5'>No pending requests</td></tr>";
