@@ -28,7 +28,7 @@ body {
   border-radius: 15px;
 }
 
-img{
+.logo{
   width: 9%;
   display: block;
   margin: 0;
@@ -50,12 +50,11 @@ body {
 }
 
 .profile {
-  flex: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 20px;
-  text-align: center ;
+  position: relative;
+  left: 18%;
 }
 
 .actions {
@@ -69,16 +68,16 @@ body {
 }
 
 h1{
-  margin-bottom: 10px;  
-  /* text-align: center; */
+  font-size: ;
+  margin-bottom: 30px; 
+  text-align: center; 
   position: relative;
-  left: 55%;
-  bottom: 70px;
+  left: 110%;
+  bottom: 140px;
 }
 
 h2 {
   margin-bottom: 15px;  
-  /* text-align: center; */
   position: relative;
   left: 57%;
 }
@@ -117,12 +116,14 @@ h2 {
     font-size: 15px;
 }
 
-button:hover {
-  background-color: #183048;
+button:hover{
+  background-color: #1954f6;
 }
 
-#profile-photo img {
+.profilePic {
   width: 150px;
   height: auto;
   border-radius: 50%;
+  position: relative;
+  left: 20px;
 }

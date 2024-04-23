@@ -55,6 +55,7 @@ th:last-child, td:last-child {
     top: 7.1%;
     left: 81%;
     font-size: 15px; */
+    cursor: pointer;
     border-radius: 5px;
     margin-right: 5px;
     color: #fff;
@@ -76,13 +77,14 @@ th:last-child, td:last-child {
     top: 7.1%;
     left: 87%;
     font-size: 15px; */
+    cursor: pointer;
     border-radius: 5px;
-    color: #fff;
-    background-color: #003d7d;
+    color: white;
+    background-color: #007bff;
 }
 
 button:hover {
-  background-color: #1a80ee;
+  background-color: #1954f6;
 }
 
 /* tr:hover { */

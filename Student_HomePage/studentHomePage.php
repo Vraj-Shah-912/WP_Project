@@ -19,7 +19,7 @@ if(!isset($_SESSION['email'])) {
 
 <body>
   <div class="navbar">
-    <img src="GECG Logo.jpeg" alt="GECG Logo">
+    <img src="GECG Logo.jpeg" class="logo" alt="GECG Logo">
     <a href="#home">Home</a>
     <a href="#bonafied" onclick="applyForCertificate('Bonafied Certificate')">Bonafied Certificate</a>
     <a href="#character" onclick="applyForCertificate('Character Certificate')">Character Certificate</a>
@@ -29,7 +29,7 @@ if(!isset($_SESSION['email'])) {
 
   <div class="container">
     <div class="profile">
-      <h1>Student profile</h1>
+      <h1>Student Profile</h1>
       <table>
         <?php
 
