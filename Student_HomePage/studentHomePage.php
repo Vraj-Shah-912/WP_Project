@@ -49,7 +49,7 @@ if(!isset($_SESSION['email'])) {
 
           if ($result->num_rows > 0) {
               $row = $result->fetch_assoc();
-              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100'></td></tr>";
+              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 150px;height: auto;border-radius: 50%;position: relative;left: 190px;bottom:30px;'></td></tr>";
               echo "<tr><td>" . $row["enrollment"] . "</td></tr>";
               echo "<tr><td>" . $row["name"] . "</td></tr>";
               echo "<tr><td>" . $row["branch"] . "</td></tr>";
