@@ -57,21 +57,22 @@ body {
   left: 18%;
 }
 
-.actions {
+ .actions {
   display: flex;
   flex: 1;
   position: absolute;
-  top: 70%;
+  top: 75%;
   text-align: center;
   /* justify-content: center; */
-  left: 46%;
-}
+  left: 47.8%;
+
+} 
 
 h1{
   margin-bottom: 30px; 
   text-align: center; 
   position: relative;
-  left: 100%;
+  left: 77%;
   bottom: 180px;
 }
 
