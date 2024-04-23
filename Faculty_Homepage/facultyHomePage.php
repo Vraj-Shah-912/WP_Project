@@ -87,12 +87,23 @@ if(!isset($_SESSION['fac_email'])) {
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            if (isset($_POST['approve']) && !isset($_SESSION['approved'])) {
+            if (isset($_POST['approve']) &&!isset($_SESSION['approved'])) {
                 $approvedEnrollment = $_POST['approve'];
-
+            
+                // Get the name from the requests table
+                $sql = "SELECT name FROM requests WHERE enrollment = $approvedEnrollment";
+                $result = $conn->query($sql);
+                $row = $result->fetch_assoc();
+                $name = $row["name"];
+            
+                // Update the name in the student table
+                $sql = "UPDATE student SET name = '$name' WHERE enrollment = $approvedEnrollment";
+                $conn->query($sql);
+            
+                // Update the status in the requests table
                 $sql = "UPDATE requests SET status = 'Approved' WHERE enrollment = $approvedEnrollment";
                 $conn->query($sql);
-
+            
                 $_SESSION['approved'] = true;
             } elseif (isset($_POST['disapprove']) && !isset($_SESSION['disapproved'])) {
                 $disapprovedEnrollment = $_POST['disapprove'];
