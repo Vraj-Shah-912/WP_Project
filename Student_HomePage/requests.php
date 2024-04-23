@@ -7,10 +7,9 @@
 </head>
 <body>
 <table id="stuTable">
-        <caption style="caption-side:bottom;">Requests from students about name changing</caption>
+        <caption style="caption-side:bottom;">Requests</caption>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Date</th>
                 <th>Name</th>
                 <th>Status</th>

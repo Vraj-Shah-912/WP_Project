@@ -91,6 +91,42 @@ button:hover {
 
 </style>
 <body>
+<div class="container">
+    <div class="profile">
+      <h1>Faculty profile</h1>
+      <table>
+        <?php
+
+          $servername = "localhost";
+          $username = "root";
+          $password = "";
+          $dbname = "wp";
+
+          $conn = new mysqli($servername, $username, $password, $dbname);
+
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
+          $email = $_SESSION['fac_email'];
+          $sql = "SELECT * FROM faculty where email = '$email'";
+          $result = $conn->query($sql);
+
+          if ($result->num_rows > 0) {
+              $row = $result->fetch_assoc();
+              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100'></td></tr>";
+              echo "<tr><td>" . $row["name"] . "</td></tr>";
+              echo "<tr><td>" . $row["branch"] . "</td></tr>";
+              echo "<tr><td>" . $row["sem"] . "</td></tr>";
+              echo "<tr><td>" . $row["class"] . "</td></tr>";
+          } else {
+              echo "<tr><td colspan='6'>No data found</td></tr>";
+          }
+
+          $conn->close();
+        ?>
+
+    </table>
+    </div>
     <table id="stuTable">
         <caption style="caption-side:bottom;" font-type="Sa">Requests from students about name changing</caption>
         <thead>

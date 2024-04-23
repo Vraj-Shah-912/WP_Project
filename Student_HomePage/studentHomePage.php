@@ -67,7 +67,9 @@ if(!isset($_SESSION['email'])) {
     <div class="actions">
       <h2>Actions</h2>
       <button class="nameCorrection" onclick="applyForNameCorrection()">Apply for Name Correction</button>
-      <button class="req">Previous Requests</button>
+      <form action="requests.php" method="post">
+        <button class="req">Previous Requests</button>
+      </form>
     </div>
   </div>
 
