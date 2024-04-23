@@ -32,4 +32,7 @@ function viewProfile() {
     // Logic for applying for student transfer
     alert("Applying for Student Transfer");
   }
-  
+
+  document.getElementById("redirect-btn").addEventListener("click", function() {
+    window.location.href = "requests.php";
+  });

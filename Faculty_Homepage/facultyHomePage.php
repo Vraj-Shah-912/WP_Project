@@ -1,3 +1,14 @@
+<?php
+session_start(); // Start the session to access session variables
+
+// Check if the user is logged in
+if(!isset($_SESSION['email'])) {
+    // Redirect to the login page if the user is not logged in
+    header("Location: /WP_Project/Login_Page/login.html");
+    exit(); // Stop further execution
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +32,7 @@
         </thead>
         <tbody>
         <?php
-            session_start(); // Start the session
+            session_start();
 
             $servername = "localhost";
             $username = "root";
@@ -34,26 +45,22 @@
                 die("Connection failed: " . $conn->connect_error);
             }
 
-            // Check if a request has been approved or disapproved
             if (isset($_POST['approve']) && !isset($_SESSION['approved'])) {
                 $approvedEnrollment = $_POST['approve'];
 
-                // Update the status of the approved request in the database
                 $sql = "UPDATE requests SET status = 'Approved' WHERE enrollment = $approvedEnrollment";
                 $conn->query($sql);
 
-                $_SESSION['approved'] = true; // Set approved flag in session
+                $_SESSION['approved'] = true;
             } elseif (isset($_POST['disapprove']) && !isset($_SESSION['disapproved'])) {
                 $disapprovedEnrollment = $_POST['disapprove'];
 
-                // Update the status of the disapproved request in the database
                 $sql = "UPDATE requests SET status = 'Disapproved' WHERE enrollment = $disapprovedEnrollment";
                 $conn->query($sql);
 
-                $_SESSION['disapproved'] = true; // Set disapproved flag in session
+                $_SESSION['disapproved'] = true;
             }
 
-            // Fetch and display requests
             $sql = "SELECT * FROM requests WHERE status != 'Approved' AND status != 'Disapproved'";
             $result = $conn->query($sql);
 
@@ -65,14 +72,8 @@
                 echo "<tr><td colspan='5'>No pending requests</td></tr>";
             }
 
-            // Reset session variables
             unset($_SESSION['approved']);
             unset($_SESSION['disapproved']);
-
-            // Delete approved/disapproved requests older than 3 days
-            $sql = "DELETE FROM requests WHERE (status = 'Approved' OR status = 'Disapproved') AND date < DATE_SUB(NOW(), INTERVAL 3 DAY)";
-            $conn->query($sql);
-
             $conn->close();
         ?>
 

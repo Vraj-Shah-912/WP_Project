@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // Establish a database connection
     $servername = "localhost";
     $username = "root";
@@ -23,10 +24,15 @@
     $result2 = $conn->query($sql2);
 
     if ($result->num_rows > 0) {
-        header("Location: /WP_Project/Student_HomePage/studentHomePage.html");
+        $row = $result->fetch_assoc();
+
+        $_SESSION['enrollment'] = $row['enrollment'];
+        $_SESSION['name'] = $row['name'];
+        $_SESSION['email'] = $row['email'];
+        header("Location: /WP_Project/Student_HomePage/studentHomePage.php");
     }
-    elseif ($result2->num_rows > 0){
-        header("Location: /WP_Project/Faculty_HomePage/facultyHomePage.php");
+    elseif ($result->num_rows > 0){
+        header("Location: /WP_Project/Faculty_HomePage/facultyHomePage.html");
     }
     else {
         echo "Invalid username or password!";
