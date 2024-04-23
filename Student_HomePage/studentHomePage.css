@@ -89,7 +89,7 @@ h2 {
     width: 235%;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: #007bff;
+    background-color: #264f7b;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -106,7 +106,7 @@ h2 {
     width: 235%;
     padding: 15px 37px;
     margin-bottom: 10px;
-    background-color: #007bff;
+    background-color: #264f7b;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -118,7 +118,7 @@ h2 {
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #183048;
 }
 
 #profile-photo img {

@@ -72,7 +72,7 @@ if(!isset($_SESSION['fac_email'])) {
             unset($_SESSION['approved']);
             unset($_SESSION['disapproved']);
             $conn->close();
-        ?>
+        ?> -->
 
         </tbody>
     </table>
