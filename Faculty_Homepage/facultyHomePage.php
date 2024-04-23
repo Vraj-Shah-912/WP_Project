@@ -122,5 +122,5 @@ if(!isset($_SESSION['fac_email'])) {
         </tbody>
     </table>
 </body>
-
+<script src="facultyHomePage.js"></script>
 </html>
