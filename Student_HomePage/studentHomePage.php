@@ -44,8 +44,17 @@ if(!isset($_SESSION['email'])) {
               die("Connection failed: " . $conn->connect_error);
           }
           $email = $_SESSION['email'];
+          $enrollment = $_SESSION['enrollment'];
           $sql = "SELECT * FROM student where email = '$email'";
+          $sql2 = "SELECT * FROM requests where enrollment = '$enrollment'";
           $result = $conn->query($sql);
+          $result2 = $conn->query($sql2);
+
+          if($result2->num_rows > 0){
+            echo "<script>";
+            echo "let enrollment = '" . $_SESSION['enrollment'] . "';";
+            echo "</script>";
+          }
 
           if ($result->num_rows > 0) {
               $row = $result->fetch_assoc();
@@ -66,7 +75,7 @@ if(!isset($_SESSION['email'])) {
     </div>
     <div class="actions">
       <h2>Actions</h2>
-      <button class="nameCorrection" onclick="applyForNameCorrection()">Apply for Name Correction</button>
+      <button class="nameCorrection" id="nameCorrection" onclick="applyForNameCorrection()">Apply for Name Correction</button>
       <form action="requests.php" method="post">
         <button class="req">Previous Requests</button>
       </form>
@@ -74,6 +83,16 @@ if(!isset($_SESSION['email'])) {
   </div>
 
   <script src="studentHomePage.js"></script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+      let btn = document.getElementById('nameCorrection');
+      if (enrollment) {
+        btn.disabled = true;
+      } else {
+        btn.disabled = false;
+        window.location.href = "http://localhost/WP_Project/Name_Correction/nameCorrection.html";
+      }});
+  </script>
 </body>
 
 </html>
