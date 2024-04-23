@@ -9,6 +9,14 @@ body {
     background-color: #f4f4f4;
   }
 
+  img{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: 45%;
+    bottom: 74%;
+  }
+
   .login-container {
     background-color: #fff;
     padding: 30px;

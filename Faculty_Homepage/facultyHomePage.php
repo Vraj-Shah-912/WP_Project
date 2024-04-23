@@ -31,7 +31,7 @@ if(!isset($_SESSION['email'])) {
             </tr>
         </thead>
         <tbody>
-        <?php
+        <!-- <?php
             session_start();
 
             $servername = "localhost";
@@ -75,7 +75,7 @@ if(!isset($_SESSION['email'])) {
             unset($_SESSION['approved']);
             unset($_SESSION['disapproved']);
             $conn->close();
-        ?>
+        ?> -->
 
         </tbody>
     </table>
