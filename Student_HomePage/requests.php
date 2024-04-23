@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All requests</title>
+    <link rel="stylesheet" href="requests.css">
 </head>
 <body>
+    <div class="navbar">
+        <img src="GECG Logo.jpeg" class="logo" alt="GECG Logo">
+        <a href="#home">Home</a>
+        <a href="#bonafied" onclick="applyForCertificate('Bonafied Certificate')">Bonafied Certificate</a>
+        <a href="#character" onclick="applyForCertificate('Character Certificate')">Character Certificate</a>
+        <a href="#studentTransfer" onclick="applyForStudentTransfer()">Student Transfer</a>
+      </div>
 <table id="stuTable">
         <caption style="caption-side:bottom;">Requests</caption>
         <thead>
@@ -48,4 +56,5 @@
         </tbody>
     </table>
 </body>
+<script src="requests.js"></script>
 </html>
