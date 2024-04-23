@@ -11,7 +11,8 @@ table {
   th, td {
     padding: 10px;
     text-align: left;
-  }xxxxx
+    /* border-bottom: 1px solid #ddd; */
+  }
   
   .approve{
       cursor: pointer;

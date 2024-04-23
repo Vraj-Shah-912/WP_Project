@@ -29,11 +29,15 @@
         $_SESSION['enrollment'] = $row['enrollment'];
         $_SESSION['name'] = $row['name'];
         $_SESSION['email'] = $row['email'];
+        $_SESSION['sem'] = $row['sem'];
+        $_SESSION['class'] = $row['class'];
         header("Location: /WP_Project/Student_HomePage/studentHomePage.php");
     }
     elseif ($result2->num_rows > 0){
         $row = $result2->fetch_assoc();
         $_SESSION['fac_email'] = $row['email'];
+        $_SESSION['fac_sem'] = $row['sem'];
+        $_SESSION['fac_class'] = $row['class'];
         header("Location: /WP_Project/Faculty_HomePage/facultyHomePage.php");
     }
     else {
