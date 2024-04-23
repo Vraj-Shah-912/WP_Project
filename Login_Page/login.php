@@ -32,6 +32,8 @@
         header("Location: /WP_Project/Student_HomePage/studentHomePage.php");
     }
     elseif ($result->num_rows > 0){
+        $row = $result->fetch_assoc();
+        $_SESSION['fac_email'] = $row['email'];
         header("Location: /WP_Project/Faculty_HomePage/facultyHomePage.html");
     }
     else {
