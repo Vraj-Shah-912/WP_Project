@@ -40,6 +40,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Prepare and bind parameters
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("ssss", $field1, $date, $field2, $status);
+    try{
+        $stmt->execute();
+    }
+    catch(Exception $e){
+        echo "You already have an entry";
+        $stmt->close();
+        $conn->close();
+        return;
+    }
 
     // Execute the statement
     if ($stmt->execute() === TRUE) {
