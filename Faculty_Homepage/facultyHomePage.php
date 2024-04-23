@@ -14,85 +14,18 @@ if(!isset($_SESSION['fac_email'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Homepage</title>
+    <link rel="stylesheet" href="facultyHomePage.css">
 </head>
 
-<style>
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead {
-  background-color: #007bff; /* Header background color */
-  color: #fff; /* Header text color */
-}
-
-th, td {
-  padding: 10px;
-  text-align: left;
-  border-bottom: 1px solid #ddd; /* Border between rows */
-}
-
-th:first-child, td:first-child {
-  border-left: 1px solid #ddd; /* Border on the left side */
-}
-
-th:last-child, td:last-child {
-  border-right: 1px solid #ddd; /* Border on the right side */
-}
-
-.approve{
-    /* display: block;
-    width: 5%;
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-    top: 7.1%;
-    left: 81%;
-    font-size: 15px; */
-    cursor: pointer;
-    border-radius: 5px;
-    margin-right: 5px;
-    color: #fff;
-    background-color: #007bff;    
-
-}
-
-.disapprove{
-    /* display: block;
-    width: 6%;
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    position: absolute;
-    top: 7.1%;
-    left: 87%;
-    font-size: 15px; */
-    cursor: pointer;
-    border-radius: 5px;
-    color: white;
-    background-color: #007bff;
-}
-
-button:hover {
-  background-color: #1954f6;
-}
-
-/* tr:hover { */
-  /* background-color: #f5f5f5; Hover color for rows */
-/* } */
-
-</style>
 <body>
+    <div class="navbar">
+        <img src="GECG Logo.jpeg" class="logo" alt="GECG Logo">
+        <a href="#home">Home</a>
+        <a href="#bonafied" onclick="applyForCertificate('Bonafied Certificate')">Bonafied Certificate</a>
+        <a href="#character" onclick="applyForCertificate('Character Certificate')">Character Certificate</a>
+        <a href="#studentTransfer" onclick="applyForStudentTransfer()">Student Transfer</a>
+      </div>
+
 <div class="container">
     <div class="profile">
       <h1>Faculty profile</h1>
@@ -115,11 +48,11 @@ button:hover {
 
           if ($result->num_rows > 0) {
               $row = $result->fetch_assoc();
-              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100'></td></tr>";
-              echo "<tr><td>" . $row["name"] . "</td></tr>";
-              echo "<tr><td>" . $row["branch"] . "</td></tr>";
-              echo "<tr><td>" . $row["sem"] . "</td></tr>";
-              echo "<tr><td>" . $row["class"] . "</td></tr>";
+              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 160px;height: 140px;border-radius: 50%;position: relative;left: 45%;bottom: 110px;'></td></tr>";
+              echo "<tr><td style='position: relative;left: 48%;bottom: 120px;'>" . $row["name"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 49.8%;bottom: 135px;'>" . $row["branch"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 50.1%;bottom: 150px;'>" . $row["sem"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 50%;bottom: 165px;'>" . $row["class"] . "</td></tr>";
           } else {
               echo "<tr><td colspan='6'>No data found</td></tr>";
           }

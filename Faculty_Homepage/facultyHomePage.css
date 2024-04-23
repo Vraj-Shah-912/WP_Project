@@ -1,0 +1,83 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Border between rows */
+  }
+  
+  th:first-child, td:first-child {
+    border-left: 1px solid #ddd; /* Border on the left side */
+  }
+  
+  th:last-child, td:last-child {
+    border-right: 1px solid #ddd; /* Border on the right side */
+  }
+  
+  .approve{
+      cursor: pointer;
+      border-radius: 5px;
+      margin-right: 5px;
+      color: #fff;
+      background-color: #007bff;    
+  
+  }
+  
+  .disapprove{
+      cursor: pointer;
+      border-radius: 5px;
+      color: white;
+      background-color: #007bff;
+  }
+  
+  button:hover {
+    background-color: #1954f6;
+  }
+
+  h1{
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    left: 1%;
+    bottom: 85px;
+  }
+
+  .navbar {
+    display: block;
+    background-color: white;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 8px 20px;
+      text-decoration: none;
+      position: relative;
+      left: 57%;
+      bottom: 120px;
+      margin: 15px auto;
+  }
+  
+  .navbar a:hover {
+    background-color: #007bff;
+    color: white;
+    border-radius: 15px;
+  }
+  
+  .logo{
+    width: 9%;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }

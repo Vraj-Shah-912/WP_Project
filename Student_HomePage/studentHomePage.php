@@ -49,12 +49,12 @@ if(!isset($_SESSION['email'])) {
 
           if ($result->num_rows > 0) {
               $row = $result->fetch_assoc();
-              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 150px;height: auto;border-radius: 50%;position: relative;left: 190px;bottom:30px;'></td></tr>";
-              echo "<tr><td>" . $row["enrollment"] . "</td></tr>";
-              echo "<tr><td>" . $row["name"] . "</td></tr>";
-              echo "<tr><td>" . $row["branch"] . "</td></tr>";
-              echo "<tr><td>" . $row["sem"] . "</td></tr>";
-              echo "<tr><td>" . $row["class"] . "</td></tr>";
+              echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 150px;height: auto;border-radius: 50%;position: relative;left: 190px;bottom: 15px;'></td></tr>";
+              echo "<tr><td style='position: relative;left: 210px;bottom: 10px;'>" . $row["enrollment"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 217px;bottom: 10px;'>" . $row["name"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 254px;bottom: 10px;'>" . $row["branch"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 260px;bottom: 10px;'>" . $row["sem"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 260px;bottom: 10px;'>" . $row["class"] . "</td></tr>";
           } else {
               echo "<tr><td colspan='6'>No data found</td></tr>";
           }

@@ -76,7 +76,7 @@ h1{
 }
 
 h2 {
-  margin-bottom: 15px;  
+  margin-bottom: 18px;  
   position: relative;
   left: 57%;
 }
@@ -118,39 +118,3 @@ h2 {
 button:hover{
   background-color: #1954f6;
 }
-
-/* .profilePic {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-  position: relative;
-  left: 190px;
-  bottom: 15px;
-}
-
-.enrollment{
-  position: relative;
-  left: 210px;
-  bottom: 10px;
-}
-
-.name{
-  position: relative;
-  left: 210px;
-  bottom: 10px;
-}
-.branch{
-  position: relative;
-  left: 254px;
-  bottom: 10px;
-}
-.sem{
-  position: relative;
-  left: 260px;
-  bottom: 10px;
-}
-.class{
-  position: relative;
-  left: 260px;
-  bottom: 10px;
-} */
