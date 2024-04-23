@@ -63,14 +63,14 @@ if(!isset($_SESSION['fac_email'])) {
     </table>
     </div>
     <table id="stuTable">
-        <caption style="caption-side:bottom;" font-type="Sa">Requests from students about name changing</caption>
+        <!-- <caption style="caption-side:bottom;" font-type="Sa">Requests from students about name changing</caption> -->
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Date</th>
-                <th>Name</th>
-                <th>Status</th>
-                <th>Options</th>
+                <th style="text-align: center;">ID</th>
+                <th style="text-align: center;">Date</th>
+                <th style="text-align: center;">Name</th>
+                <th style="text-align: center;">Status</th>
+                <th style="text-align: center;">Options</th>
             </tr>
         </thead>
         <tbody>
@@ -108,7 +108,7 @@ if(!isset($_SESSION['fac_email'])) {
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["enrollment"] . "</td><td>" . $row["date"] . "</td><td>" . $row["name"] . "</td><td>" . $row["status"] . "</td><td><form method='POST'><button name='approve' class='approve' value='" . $row["enrollment"] . "'>Approve</button><button name='disapprove' class='disapprove' value='" . $row["enrollment"] . "'>Disapprove</button></form></td></tr>";
+                    echo "<tr><td style='text-align: center;'>" . $row["enrollment"] . "</td><td style='text-align: center;'>" . $row["date"] . "</td><td style='text-align: center;'>" . $row["name"] . "</td><td style='text-align: center;'>" . $row["status"] . "</td><td style='text-align: center;'><form method='POST'><button name='approve' class='approve' value='" . $row["enrollment"] . "'>Approve</button><button name='disapprove' class='disapprove' value='" . $row["enrollment"] . "'>Disapprove</button></form></td></tr>";
                 }
             } else {
                 echo "<tr><td colspan='5'>No pending requests</td></tr>";

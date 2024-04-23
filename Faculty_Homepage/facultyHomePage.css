@@ -11,9 +11,8 @@ table {
   th, td {
     padding: 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd; /* Border between rows */
+    border-bottom: 1px solid #ddd;/* Border between rows */
   }
-  
   th:first-child, td:first-child {
     border-left: 1px solid #ddd; /* Border on the left side */
   }
@@ -28,7 +27,6 @@ table {
       margin-right: 5px;
       color: #fff;
       background-color: #007bff;    
-  
   }
   
   .disapprove{

@@ -44,7 +44,7 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<tr><td>" . $row["date"] . "</td><td>" . $row["name"] . "</td><td>" . $row["status"] . "</td></tr>";
+                    echo "<tr><td style='text-align: center;'>" . $row["date"] . "</td><td style='text-align: center;'>" . $row["name"] . "</td><td style='text-align: center;'>" . $row["status"] . "</td></tr>";
                 }
             } else {
                 echo "<tr><td colspan='5'>No pending requests</td></tr>";

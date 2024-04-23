@@ -12,7 +12,7 @@ table {
   
   thead th {
     padding: 10px 45px; /* Padding for header cells */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Align text to the left */
     border-bottom: 2px solid #fff; /* Bottom border for header cells */
   }
 
