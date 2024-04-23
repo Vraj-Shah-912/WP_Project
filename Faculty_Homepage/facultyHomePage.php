@@ -1,11 +1,9 @@
 <?php
-session_start(); // Start the session to access session variables
+session_start();
 
-// Check if the user is logged in
 if(!isset($_SESSION['fac_email'])) {
-    // Redirect to the login page if the user is not logged in
     header("Location: /WP_Project/Login_Page/login.html");
-    exit(); // Stop further execution
+    exit();
 }
 ?>
 
@@ -32,7 +30,6 @@ if(!isset($_SESSION['fac_email'])) {
         </thead>
         <tbody>
         <?php
-            session_start();
 
             $servername = "localhost";
             $username = "root";
