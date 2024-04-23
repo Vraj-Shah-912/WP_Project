@@ -42,6 +42,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssss", $field1, $date, $field2, $status);
     try{
         $stmt->execute();
+        echo "Data inserted successfully";
+        $stmt->close();
+        $conn->close();
+        return;
     }
     catch(Exception $e){
         echo "You already have an entry";
@@ -49,16 +53,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conn->close();
         return;
     }
-
-    // Execute the statement
-    if ($stmt->execute() === TRUE) {
-        echo "Data inserted successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-
-    // Close statement and connection
-    $stmt->close();
-    $conn->close();
 }
 ?>
