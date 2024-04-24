@@ -51,10 +51,10 @@ if(!isset($_SESSION['email'])) {
               $row = $result->fetch_assoc();
               echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 150px;height: auto;border-radius: 50%;position: relative;left: 220px;bottom: 15px;'></td></tr>";
               echo "<tr><td style='position: relative;left: 150px;bottom: 0px;font-size: 20px;'><b>Enrollment No. :</b>&emsp;" . $row["enrollment"] . "</td></tr>";
-              echo "<tr><td style='position: relative;left: 200px;bottom: -9px;font-size: 20px;'><b>Name :</b>&emsp;" . $row["name"] . "</td></tr>";
-              echo "<tr><td style='position: relative;left: 230px;bottom: -18px;font-size: 20px;'><b>Branch :</b>&emsp;" . $row["branch"] . "</td></tr>";
-              echo "<tr><td style='position: relative;left: 230px;bottom: -26px;font-size: 20px;'><b>Semester :</b>&emsp;" . $row["sem"] . "</td></tr>";
-              echo "<tr><td style='position: relative;left: 255px;bottom: -33px;font-size: 20px;'><b>Class :</b>&emsp;" . $row["class"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 239px;bottom: -9px;font-size: 20px;'><b>Name :</b>&emsp;" . $row["name"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 225px;bottom: -18px;font-size: 20px;'><b>Branch :</b>&emsp;" . $row["branch"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 205px;bottom: -26px;font-size: 20px;'><b>Semester :</b>&emsp;" . $row["sem"] . "</td></tr>";
+              echo "<tr><td style='position: relative;left: 243px;bottom: -33px;font-size: 20px;'><b>Class :</b>&emsp;" . $row["class"] . "</td></tr>";
           } else {
               echo "<tr><td colspan='6'>No data found</td></tr>";
           }

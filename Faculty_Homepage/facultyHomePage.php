@@ -51,8 +51,8 @@ if(!isset($_SESSION['fac_email'])) {
                 echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 110px;height: 110px;border-radius: 50%;position: relative;left: 50.5%;bottom: 40px;'></td></tr>";
                 echo "<tr><td style='position: relative;left: 47%;bottom: 55px;font-size: 25px;'><b>Name :</b>&emsp;" . $row['name'] . "</td></tr>";
                 echo "<tr><td style='position: relative;left: 45.8%;bottom: 65px;font-size: 25px;'><b>Branch :</b>&emsp;" . $row['branch'] . "</td></tr>";
-                echo "<tr><td style='position: relative;left: 44.65%;bottom: 80px;font-size: 25px;'><b>Semester :</b>&emsp;" . $row['sem'] . "</td></tr>";
-                echo "<tr><td style='position: relative;left: 47.3%;bottom: 93px;font-size: 25px;'><b>Class :</b>&emsp;" . $row['class'] . "</td></tr>";
+                echo "<tr><td style='position: relative;left: 44.65%;bottom: 79px;font-size: 25px;'><b>Semester :</b>&emsp;" . $row['sem'] . "</td></tr>";
+                echo "<tr><td style='position: relative;left: 47.3%;bottom: 92px;font-size: 25px;'><b>Class :</b>&emsp;" . $row['class'] . "</td></tr>";
             } else {
                 echo "<tr><td colspan='6'>No data found</td></tr>";
             }

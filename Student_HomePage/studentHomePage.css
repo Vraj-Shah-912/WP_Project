@@ -64,7 +64,7 @@ body {
   top: 75%;
   text-align: center;
   /* justify-content: center; */
-  left: 47.8%;
+  left: 47%;
 
 } 
 
@@ -79,7 +79,7 @@ h1{
 h2 {
   margin-bottom: 18px;  
   position: relative;
-  left: 57%;
+  left: 55%;
 }
 
 .nameCorrection {
@@ -95,7 +95,7 @@ h2 {
     cursor: pointer;
     position: absolute;
     top: 80%;
-    left: -6%;
+    left: -10%;
     font-size: 15px;
 }
 
@@ -112,7 +112,7 @@ h2 {
     cursor: pointer;
     position: absolute;
     top: 170%;
-    left: -6%;
+    left: -10%;
     font-size: 15px;
 }
 
