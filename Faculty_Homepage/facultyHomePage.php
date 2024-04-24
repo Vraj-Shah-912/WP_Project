@@ -28,7 +28,7 @@ if(!isset($_SESSION['fac_email'])) {
 
 <div class="container">
     <div class="profile">
-      <h1>Faculty profile</h1>
+      <h1>Faculty profile</h1>  
       <table>
         <tbody>
             <?php
@@ -48,7 +48,7 @@ if(!isset($_SESSION['fac_email'])) {
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 160px;height: 140px;border-radius: 50%;position: relative;left: 45%;bottom: 110px;'></td></tr>";
+                echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 60px;height: 60px;border-radius: 50%;position: relative;left: 96%;bottom: 275px;'></td></tr>";
                 echo "<tr><td style='position: relative;left: 48%;bottom: 120px;'><b>Name :</b>&emsp;" . $row['name'] . "</td></tr>";
                 echo "<tr><td style='position: relative;left: 49.8%;bottom: 135px;'><b>Branch :</b>&emsp;" . $row['branch'] . "</td></tr>";
                 echo "<tr><td style='position: relative;left: 50.1%;bottom: 150px;'><b>Semester :</b>&emsp;" . $row['sem'] . "</td></tr>";
@@ -64,7 +64,7 @@ if(!isset($_SESSION['fac_email'])) {
     </table>
     </div>
     <table id="stuTable">
-        <caption style="caption-side:top;" font-type="Sa"><h2>Requests from students about name changing</h2></caption>
+        <caption style="caption-side:top;position: relative;bottom: 490px;left: 4%;}" font-type="Sa"><h2>Requests from students about name changing</h2></caption>
         <thead>
             <tr>
                 <th style="text-align: center;">ID</th>
