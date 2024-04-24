@@ -27,9 +27,9 @@ if(!isset($_SESSION['fac_email'])) {
       </div>
 
 <div class="container">
+    <div class="facultyProfile" style="position: relative;bottom: 50px;left: 46%;font-size: 40px;font-weight: bold;">Faculty profile</div>  
     <div class="profile">
-      <h1>Faculty profile</h1>  
-      <table>
+    <table>
         <tbody>
             <?php
             $servername = "localhost";
@@ -48,11 +48,11 @@ if(!isset($_SESSION['fac_email'])) {
 
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 60px;height: 60px;border-radius: 50%;position: relative;left: 96%;bottom: 275px;'></td></tr>";
-                echo "<tr><td style='position: relative;left: 48%;bottom: 120px;'><b>Name :</b>&emsp;" . $row['name'] . "</td></tr>";
-                echo "<tr><td style='position: relative;left: 49.8%;bottom: 135px;'><b>Branch :</b>&emsp;" . $row['branch'] . "</td></tr>";
-                echo "<tr><td style='position: relative;left: 50.1%;bottom: 150px;'><b>Semester :</b>&emsp;" . $row['sem'] . "</td></tr>";
-                echo "<tr><td style='position: relative;left: 50%;bottom: 165px;'><b>Class :</b>&emsp;" . $row['class'] . "</td></tr>";
+                echo "<tr><td><img src='data:image/jpeg;base64," . base64_encode($row['pic']) . "' width='100' style='width: 110px;height: 110px;border-radius: 50%;position: relative;left: 50.5%;bottom: 40px;'></td></tr>";
+                echo "<tr><td style='position: relative;left: 47%;bottom: 55px;font-size: 25px;'><b>Name :</b>&emsp;" . $row['name'] . "</td></tr>";
+                echo "<tr><td style='position: relative;left: 45.8%;bottom: 65px;font-size: 25px;'><b>Branch :</b>&emsp;" . $row['branch'] . "</td></tr>";
+                echo "<tr><td style='position: relative;left: 44.65%;bottom: 80px;font-size: 25px;'><b>Semester :</b>&emsp;" . $row['sem'] . "</td></tr>";
+                echo "<tr><td style='position: relative;left: 47.3%;bottom: 93px;font-size: 25px;'><b>Class :</b>&emsp;" . $row['class'] . "</td></tr>";
             } else {
                 echo "<tr><td colspan='6'>No data found</td></tr>";
             }
@@ -63,8 +63,9 @@ if(!isset($_SESSION['fac_email'])) {
 
     </table>
     </div>
-    <table id="stuTable">
-        <caption style="caption-side:top;position: relative;bottom: 490px;left: 4%;}" font-type="Sa"><h2>Requests from students about name changing</h2></caption>
+    <table id="stuTable" style="position: relative;bottom: 95px;">
+        <caption style="caption-side:top;position: relative;bottom: 490px;left: 4%;" font-type="Sa"><h2 style='position: relative;
+    top: 500px;'>Requests from students about name changing</h2></caption>
         <thead>
             <tr>
                 <th style="text-align: center;">ID</th>

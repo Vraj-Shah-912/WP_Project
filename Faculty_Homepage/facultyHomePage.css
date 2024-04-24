@@ -33,14 +33,6 @@ table {
     background-color: #1954f6;
   }
 
-  h1{
-    margin-bottom: 30px;
-    text-align: center;
-    position: relative;
-    left: 1%;
-    bottom: 85px;
-  }
-
   .navbar {
     display: block;
     background-color: white;
@@ -58,12 +50,14 @@ table {
       left: 57%;
       bottom: 120px;
       margin: 15px auto;
+      cursor: pointer;
   }
   
   .navbar a:hover {
     background-color: #007bff;
     color: white;
     border-radius: 15px;
+    cursor: pointer;
   }
   
   .logo{
